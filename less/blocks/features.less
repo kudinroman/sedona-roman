@@ -1,0 +1,256 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 45px 30px 10px;
+}
+
+.features__item--padding-left {
+  padding: 30px 50px 0px 70px;
+  text-align: left;
+  .features__title {
+    padding: 0px;
+    padding-bottom: 15px;
+    font-weight: 900;
+  }
+  .features__text {
+    padding: 0px;
+  }
+}
+
+.features__item--margin-bottom {
+  margin-bottom: 30px;
+}
+
+.features__item--title {
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 37px;
+    width: 320px;
+    bottom: -37px;
+    left: 0px;
+    background: url("../../img/bg-triangle.svg");
+    z-index: 1;
+  }
+  .features__title {
+    margin-bottom: 30px;
+  }
+}
+
+.features__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'PT Sans', 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  padding: 0px;
+}
+
+.features__text {
+  font-family: 'PT Sans', 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  padding: 0px;
+}
+
+.features__text--number {
+  padding: 12px 0px;
+  line-height: 21px;
+}
+
+.features__item--blue-background {
+  padding: 77px 30px 40px;
+  background: #81b3d2;
+}
+
+.features__item--blue-background .features__title,
+.features__item--blue-background .features__text,
+.features__item--blue-background .featurestext--number {
+  color: #ffffff;
+}
+
+.features__svg {
+  position: absolute;
+  fill: #81b3d2;
+  top: 10px;
+  left: 20px;
+}
+
+.features__item--padding-top {
+  padding-top: 40px;
+}
+
+.features__item--picture {
+  padding: 0px;
+}
+
+.features__item--gray-background {
+  background: #eeeeee;
+  padding: 0px 15px;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 1px;
+    width: 280px;
+    bottom: 0px;
+    left: 20px;
+    background: #d6d6d6;
+    z-index: 1;
+  }
+  .features__title {
+    padding-top: 23px;
+    font-weight: 900;
+  }
+  .features__text:last-of-type {
+    padding-bottom: 30px;
+  }
+}
+
+.features__item--gray-background:last-of-type {
+  &::after {
+    position: absolute;
+    display: none;
+    content: "";
+    height: 1px;
+    width: 280px;
+    bottom: 0px;
+    left: 20px;
+    background: #d6d6d6;
+    z-index: 1;
+  }
+}
+
+.features__item--picture {
+  line-height: 0px;
+}
+
+@media (min-width: 768px) {
+
+  .features__title {
+    font-weight: 900;
+    font-size: 21px;
+  }
+
+  .features__item--title {
+    margin-bottom: 50px;
+    &::after {
+      display: none;
+    }
+  }
+
+  .features__item--blue-background {
+    width: 256px;
+    padding: 45px 40px;
+  }
+
+  .features__item--padding-top {
+    order: 4;
+  }
+
+  .features__item--gray-background {
+    order: 4;
+  }
+
+  .features__item--picture {
+    width: 512px;
+  }
+
+  .features__item--padding-left {
+    width: 256px;
+    padding: 0px;
+    text-align: center;
+    padding: 68px 45px;
+  }
+
+  .features__item--gray-background {
+    width: 256px;
+    padding: 22px 18px;
+    .features__title {
+      padding: 16px 50px 6px;
+    }
+    .features__text {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .features__item--picture:nth-of-type(2n+0) {
+    order: 2;
+  }
+
+  .features__item--padding-left:nth-of-type(2n+1) {
+    order: 2;
+  }
+
+  .features__item--margin-bottom {
+    margin-bottom: 0px;
+  }
+
+  .features__svg {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__item--blue-background,
+  .features__item--padding-left,
+  .features__item--gray-background {
+    width: 400px;
+  }
+
+  .features__item--blue-background {
+    padding: 50px 65px 60px;
+    .features__title {
+      padding: 0px 55px;
+    }
+  }
+
+  .features__item--padding-left {
+    .features__title {
+      padding: 10px 0px 25px;
+    }
+  }
+
+  .features__item--picture {
+    width: 800px;
+    height: 256px;
+    overflow: hidden;
+    .features__img {
+      position: relative;
+      top: -70px;
+    }
+  }
+
+  .features__item--gray-background {
+    padding: 38px 60px;
+    .features__title {
+      padding: 10px 70px 1px;
+    }
+  }
+
+  .features__item--title {
+    padding: 50px 355px;
+  }
+}

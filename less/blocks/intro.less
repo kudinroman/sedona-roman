@@ -1,0 +1,72 @@
+.intro__background {
+  position: relative;
+  .contaner();
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1200px;
+    height: 61px;
+    background: url("../../img/bg-intro-triangle-desktop.svg");
+    bottom: 0px;
+    margin-left: -600px;
+    left: 50%;
+  }
+}
+
+.intro__background-img {
+  position: relative;
+  @media (max-width: 767px) {
+    margin-left: -384px;
+    left: 50%;
+  }
+}
+
+.intro__title-img {
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 20px;
+  width: 280px;
+  @media (min-width: 768px) {
+    top: 77px;
+    left: 153px;
+    width: 460px;
+  }
+  @media (min-width: 1200px) {
+    top: 77px;
+    left: 371px;
+    width: 460px;
+  }
+}
+
+.intro__background--little-height {
+  height: 158px;
+  &::after {
+    bottom: -4px;
+  }
+  .intro__title-img {
+    top: 52px;
+    left: 45px;
+    width: 230px;
+  }
+  .intro__background-img {
+    top: -225px;
+  }
+  @media (min-width: 768px) {
+    height: 290px;
+    .intro__title-img {
+      top: 95px;
+      left: 156px;
+      width: 458px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro__title-img {
+      top: 101px;
+      left: 369px;
+      width: 461px;
+    }
+  }
+}
