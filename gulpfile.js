@@ -15,6 +15,7 @@ var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
+var ghPages = require("gulp-gh-pages");
 var server = require("browser-sync").create();
 var watch = require("gulp-watch");
 
@@ -103,6 +104,11 @@ gulp.task("copyjs", function() {
     base: "."
   })
   .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("deploy", function() {
+  return gulp.src("./build/**/*")
+    .pipe(ghPages());
 });
 
 gulp.task("serve", function() {

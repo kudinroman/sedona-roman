@@ -1,0 +1,27 @@
+.hashtag {
+  @media @desktop {
+    position: relative;
+    left: 90px;
+  }
+}
+
+.hashtag__link {
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: @color-1;
+  margin-bottom: 40px;
+
+  &:hover {
+    color: @color-4;
+  }
+
+  &:active {
+    color: @color-12;
+  }
+
+  @media @tablet {
+    margin-bottom: 0px;
+  }
+}

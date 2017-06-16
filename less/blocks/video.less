@@ -1,15 +1,16 @@
-@media (min-width: 768px) {
-  .video {
-    width: 648px;
-    margin: auto;
+.video {
+  @media @tablet {
+  width: 648px;
+  margin: auto;
+  }
+
+  @media @desktop {
+    width: 100%;
   }
 }
 
-@media (min-width: 1200px) {
-  .video {
-    width: 100%;
-  }
-  .video__item {
+.video__item {
+  @media @desktop {
     width: 800px;
     margin: auto;
   }

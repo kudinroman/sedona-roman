@@ -1,72 +1,52 @@
-.intro__background {
-  position: relative;
-  .contaner();
-  overflow: hidden;
-  &::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1200px;
-    height: 61px;
-    background: url("../../img/bg-intro-triangle-desktop.svg");
-    bottom: 0px;
-    margin-left: -600px;
-    left: 50%;
+.intro {
+  display: flex;
+  justify-content: center;
+  height: 389px;
+  background-image:
+    url("../img/bg-intro-triangle-mobile.svg"),
+    url("../img/bg-back-mobile@1x.jpg");
+  background-position: center bottom, center;
+  background-repeat: no-repeat;
+  background-size: 105%, cover;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image:
+      url("../img/bg-intro-triangle-mobile.svg"),
+      url("../img/bg-back-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    height: 518px;
+    background-image:
+      url("../img/bg-intro-triangle-tablet.svg"),
+      url("../img/bg-back-tablet@1x.jpg");
+  }
+
+  @media (min-width: 768px) and (min-resolution: 144dpi),
+         (min-width: 768px) and (min-resolution: 1.5dppx) {
+    background-image:
+    url("../img/bg-intro-triangle-tablet.svg"),
+    url("../img/bg-back-tablet@2x.jpg");
+  }
+
+  @media @desktop {
+    background-image:
+      url("../img/bg-intro-triangle-desktop.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+  }
+
+  @media (min-width: 1200px) and (min-resolution: 144dpi),
+         (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    background-image:
+    url("../img/bg-intro-triangle-desktop.svg"),
+    url("../img/bg-back-desktop@2x.jpg");
   }
 }
 
-.intro__background-img {
-  position: relative;
-  @media (max-width: 767px) {
-    margin-left: -384px;
-    left: 50%;
-  }
-}
-
-.intro__title-img {
-  position: absolute;
-  z-index: 1;
-  top: 90px;
-  left: 20px;
+.intro__img {
   width: 280px;
-  @media (min-width: 768px) {
-    top: 77px;
-    left: 153px;
-    width: 460px;
-  }
-  @media (min-width: 1200px) {
-    top: 77px;
-    left: 371px;
-    width: 460px;
-  }
-}
 
-.intro__background--little-height {
-  height: 158px;
-  &::after {
-    bottom: -4px;
-  }
-  .intro__title-img {
-    top: 52px;
-    left: 45px;
-    width: 230px;
-  }
-  .intro__background-img {
-    top: -225px;
-  }
-  @media (min-width: 768px) {
-    height: 290px;
-    .intro__title-img {
-      top: 95px;
-      left: 156px;
-      width: 458px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .intro__title-img {
-      top: 101px;
-      left: 369px;
-      width: 461px;
-    }
+  @media @tablet {
+    width: 460px;
   }
 }

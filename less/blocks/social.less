@@ -1,4 +1,4 @@
-.social__list {
+.social {
   display: flex;
 }
 
@@ -11,12 +11,15 @@
   display: block;
   width: 46px;
   height: 48px;
-  background: #81b3d2;
+  background: @color-4;
+
   &:hover {
-    background: #669ec0;
+    background: @color-11;
   }
+
   &:active {
-    background: #5496bd;
+    background: @color-9;
+    
     &::before {
       opacity: .3;
     }
@@ -32,19 +35,19 @@
 }
 
 .social__link--twitter::before {
-  background: url("../../img/icons/icon-twitter.svg") no-repeat;
+  background: url("../img/icons/icon-twitter.svg") no-repeat;
   top: 15px;
   left: 14px;
 }
 
 .social__link--facebook::before {
-  background: url("../../img/icons/icon-facebook.svg") no-repeat;
+  background: url("../img/icons/icon-facebook.svg") no-repeat;
   top: 13px;
   left: 19px;
 }
 
 .social__link--youtube::before {
-  background: url("../../img/icons/icon-youtube.svg") no-repeat;
+  background: url("../img/icons/icon-youtube.svg") no-repeat;
   top: 17px;
   left: 13px;
 }

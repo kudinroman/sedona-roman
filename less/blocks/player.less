@@ -4,26 +4,28 @@
   width: 280px;
   margin: auto;
   background: rgba(0, 0, 0, .6);
-  border-bottom: 66px solid #f2f2f2;
+  border-bottom: 66px solid @color-7;
   bottom: 49px;
+
   &::before {
     position: absolute;
     display: block;
     content: "";
     width: 235px;
     height: 3px;
-    background: #ffffff;
+    background: @color-3;
     opacity: .2;
     left: 22px;
     top: 22px;
   }
+
   &::after {
     position: absolute;
     display: block;
     content: "";
     width: 9px;
     height: 9px;
-    background: #ffffff;
+    background: @color-3;
     left: 58px;
     top: 19px;
     border-radius: 100%;
@@ -37,9 +39,11 @@
   bottom: -42px;
   fill: #5c6870;
   cursor: pointer;
+
   &:hover {
-    fill: #333333;
+    fill: @color-2;
   }
+  
   &:active {
     opacity: .3;
   }
