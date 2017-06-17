@@ -1,19 +1,10 @@
 .container() {
   width: 320px;
   margin: auto;
-  @media (min-width: 768px) {
+  @media @tablet {
     width: 768px;
   }
-  @media (min-width: 1200px) {
+  @media @desktop {
     width: 1200px;
-  }
-}
-
-.states() {
-  &:hover {
-    color: #81b3d2;
-  }
-  &:active {
-    color: #b2b2b2;
   }
 }
