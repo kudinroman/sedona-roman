@@ -8,10 +8,11 @@
 
 .social__link {
   position: relative;
-  display: block;
+  display: flex;
   width: 46px;
   height: 48px;
   background: @color-4;
+  font-size: 0px;
 
   &:hover {
     background: @color-11;
@@ -19,35 +20,19 @@
 
   &:active {
     background: @color-9;
-    
+    .social__icon {
+      opacity: .3;
+    }
+
     &::before {
       opacity: .3;
     }
   }
 }
 
-.social__link::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 30px;
-  height: 30px;
-}
-
-.social__link--twitter::before {
-  background: url("../img/icons/icon-twitter.svg") no-repeat;
-  top: 15px;
-  left: 14px;
-}
-
-.social__link--facebook::before {
-  background: url("../img/icons/icon-facebook.svg") no-repeat;
-  top: 13px;
-  left: 19px;
-}
-
-.social__link--youtube::before {
-  background: url("../img/icons/icon-youtube.svg") no-repeat;
-  top: 17px;
-  left: 13px;
+.social__icon {
+  margin: auto;
+  fill: @color-3;
+  width: 18px;
+  height: 18px;
 }
