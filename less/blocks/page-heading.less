@@ -1,5 +1,5 @@
 .page-heading {
-  // .container ();
+  min-width: 320px;
   background: @color-3;
 }
 
@@ -27,6 +27,7 @@
   font-size: 14px;
   font-weight: 400;
   padding-bottom: 6px;
+  padding: 0px 10% 6px;
 
   &::after {
     position: relative;
@@ -43,6 +44,32 @@
 
   @media @tablet {
     padding-bottom: 50px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.page-heading--photo {
+  @media @tablet {
+    padding: 28px 0px;
+    font-size: 30px;
+  }
+
+  .page-heading__title {
+    @media @tablet {
+      font-size: 30px;
+    }
+  }
+
+  .page-heading__text {
+    padding-bottom: 36px;
+    border-bottom: 1px solid @color-10;
+
+    @media @tablet {
+      border-bottom: none;
+    }
 
     &::after {
       display: none;

@@ -1,6 +1,9 @@
 .photos {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
 
   @media @tablet {
     width: 648px;
@@ -8,28 +11,94 @@
   }
 
   @media @desktop {
-    width: 100%;
+    width: 1200px;
+    margin: auto;
   }
 }
 
 .photos__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid @color-10;
   font-size: 14px;
   color: @color-2;
+  padding: 22px 20px;
 
   @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 324px;
     padding: 0px;
     border-bottom: none;
     background: @color-7;
+  }
+
+  @media @desktop {
+    width: 400px;
+    margin: auto;
+  }
+
+  &:first-of-type {
+    @media @tablet {
+      width: 648px;
+    }
+
+    @media @desktop {
+      width: 1200px;
+      margin: auto;
+    }
+  }
+
+  &:last-of-type {
+    @media @tablet {
+      margin-right: auto;
+    }
+  }
+}
+
+.photos__description {
+  @media @tablet {
+    padding: 8px 21px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: @color-3;
+    left: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, .3);
+  }
+}
+
+.photos__counter {
+  @media @tablet {
+    display: flex;
+    width: 84px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  @media @desktop {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
   }
 }
 
 .photos__name {
   font-weight: 700;
+  text-align: left;
+  margin-top: 10px;
 }
 
 .photos__author {
   font-weight: 400;
+  text-align: left;
+  text-transform: none;
+  margin-bottom: 7px;
 }
 
 .photos__counter-text {
@@ -37,6 +106,11 @@
   font-weight: 900;
   color: @color-1;
   padding-left: 37px;
+  text-align: left;
+
+  @media @desktop {
+    color: @color-3;
+  }
 
   &::before {
     position: absolute;

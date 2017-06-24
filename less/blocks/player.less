@@ -5,7 +5,19 @@
   margin: auto;
   background: rgba(0, 0, 0, .6);
   border-bottom: 66px solid @color-7;
-  bottom: 49px;
+  bottom: 45px;
+
+  @media @tablet {
+    position: absolute;
+    width: 648px;
+    border-bottom: none;
+    height: 92px;
+    bottom: 0px;
+  }
+
+  @media @desktop {
+    width: 800px;
+  }
 
   &::before {
     position: absolute;
@@ -17,6 +29,16 @@
     opacity: .2;
     left: 22px;
     top: 22px;
+
+    @media @tablet {
+      width: 389px;
+      left: 93px;
+      top: 45px;
+    }
+
+    @media @desktop {
+      width: 540px;
+    }
   }
 
   &::after {
@@ -31,6 +53,11 @@
     border-radius: 100%;
     cursor: pointer;
     opacity: 1;
+
+    @media @tablet {
+      left: 206px;
+      top: 42px;
+    }
   }
 }
 
@@ -43,24 +70,53 @@
 
   &:hover {
     fill: @color-2;
+
+    @media @tablet {
+      fill: @color-3;
+    }
   }
 
   &:active {
     opacity: .3;
+  }
+
+  @media @tablet {
+    top: 35px;
+    fill: @color-3;
   }
 }
 
 .player__item--replay {
   width: 16px;
   left: 25px;
+
+  @media @tablet {
+    left: 35px;
+  }
 }
 
 .player__item--subtitles {
   width: 32px;
   left: 174px;
+
+  @media @tablet {
+    left: 524px;
+  }
+
+  @media @desktop {
+    width: 674px;
+  }
 }
 
 .player__item--fullscreen {
   width: 20px;
   left: 237px;
+
+  @media @tablet {
+    left: 587px;
+  }
+
+  @media @desktop {
+    width: 737px;
+  }
 }

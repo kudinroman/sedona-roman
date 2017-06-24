@@ -1,17 +1,13 @@
 .video {
-  @media @tablet {
-    width: 648px;
-    margin: auto;
-  }
+  min-width: 320px;
 
-  @media @desktop {
-    width: 100%;
+  @media @tablet {
+    margin-bottom: 40px;
   }
 }
 
 .video__item {
-  @media @desktop {
-    width: 800px;
-    margin: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
