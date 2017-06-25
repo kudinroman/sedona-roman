@@ -30,14 +30,14 @@
         <img class="intro__img" src="img/text-sedona.svg" alt="Sedona">
       </div>
     </header>
-    <section class="page-heading">
+    <section class="page-heading  page-heading--form">
       <h2 class="page-heading__title">Оставьте свой отзыв</h2>
       <p class="page-heading__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
     <main class="main">
       <form class="form" action="index.html" method="post">
         <div class="field-text  field-group">
-          <h3 class="field-text__title">Представьтесь:</h3>
+          <h3 class="field-text__title  field-text__title--margin-bottom">Представьтесь:</h3>
           <label class="field-text__item">
             <span class="field-text__text">Имя*:</span>
             <input class="field-text__input" name="yourname" type="text" placeholder="Петр" required>
@@ -51,16 +51,16 @@
             <input class="field-text__input" name="yourpatronymic" type="text" placeholder="Александрович" required>
           </label>
         </div>
-        <div class="field-text  field-group">
-          <h3 class="field-text__title">Контактная информация:</h3>
-          <div class="field-text__wrapper">
-            <label class="field-text__label">Контактный телефон*:</label>
-            <input class="field-text__input" name="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{5,15}" required>
-          </div>
-          <div class="field-text__wrapper">
-            <label class="field-text__label">Электронная почта*:</label>
-            <input class="field-text__input" name="email" type="email" placeholder="Введите email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
-          </div>
+        <div class="field-text  field-group  field-text--contact  field-group--before">
+          <h3 class="field-text__title  field-group--title">Контактная информация:</h3>
+          <label class="field-text__item">
+            <span class="field-text__text">Контактный телефон*:</span>
+            <input class="field-text__input  field-text__input--icon" name="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{5,15}" required>
+          </label>
+          <label class="field-text__item">
+            <span class="field-text__text">Электронная почта*:</span>
+            <input class="field-text__input  field-text__input--icon" name="email" type="email" placeholder="Введите email" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" required>
+          </label>
         </div>
         <div class="field-radio  field-group">
           <h3 class="field-radio__title">Ваше общее впечатление:</h3>
@@ -79,8 +79,8 @@
             </label>
           </div>
         </div>
-        <div class="field-checkbox  field-group">
-          <h3 class="field-checkbox__title">Посещенные достопримечательности:</h3>
+        <div class="field-checkbox  field-group  field-group--before">
+          <h3 class="field-checkbox__title  field-group--title">Посещенные достопримечательности:</h3>
           <div class="field-checkbox__wrapper">
             <label class="field-checkbox__item">
               <input class="field-checkbox__input" type="checkbox" name="checkbox" checked>
@@ -100,15 +100,16 @@
             </label>
           </div>
         </div>
-        <div class="field-text  field-group">
-          <label class="field-text__title" for="textarea">Опишите свои эмоции:</label>
-          <div class="field-text__wrapper">
-            <textarea class="field-text__input" id="textarea" type="text" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
+        <div class="field-text  field-group  field-group--before">
+          <label class="field-text__title  field-group--title" for="textarea">Опишите свои эмоции:</label>
+          <div class="field-text__wrapper  field-text__wrapper--textarea">
+            <textarea class="field-text__input" id="textarea" type="text" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
         </div>
         <div class="field-action">
           <button class="field-action__btn  button" type="submit">Отправить отзыв</button>
         </div>
+        <p class="form__text">* — обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
@@ -148,6 +149,16 @@
         </a>
       </div>
     </footer>
+    <div class="modal  modal--success">
+      <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="button  modal__btn">Закрыть окно</button>
+    </div>
+    <div class="modal  modal--error">
+      <h3 class="modal__title">Что-то пошло не так!</h3>
+      <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="button  modal__btn">Ок</button>
+    </div>
     <script src="js/toggle.js"></script>
   </body>
 </html>
