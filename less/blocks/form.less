@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 84.5%;
+    margin: auto;
+    margin-bottom: 63px;
+  }
+}
+
+.form__text {
+  display: none;
+
+  @media @tablet {
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    color: @color-2;
+    align-self: center;
+    margin-left: auto;
+  }
+}

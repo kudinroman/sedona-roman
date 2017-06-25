@@ -1,0 +1,116 @@
+.field-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0px 6%;
+
+  @media @tablet {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+.field-checkbox__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 20px 0px;
+  margin: auto;
+
+  @media @tablet {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.field-checkbox__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+
+  @media @tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding-left: 15%;
+  }
+
+  @media @desktop {
+    padding-left: 0px;
+    justify-content: space-between;
+  }
+}
+
+.field-checkbox__item {
+  @media @tablet {
+    width: 256px;
+  }
+
+  @media @desktop {
+    width: auto;
+  }
+}
+
+.field-checkbox__input {
+  display: none;
+}
+
+.field-checkbox__text {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: none;
+  padding: 15px 0px 15px 80px;
+  margin-bottom: 23px;
+
+  @media @tablet {
+    text-align: left;
+  }
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 56px;
+    height: 56px;
+    top: 0px;
+    left: 0px;
+    background: @color-7;
+  }
+
+  &:hover::before {
+    background: @color-10;
+  }
+
+  &:active::before {
+    background: @color-6;
+  }
+}
+.field-checkbox__input:checked + .field-checkbox__text::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 22px;
+    height: 14px;
+    top: 18px;
+    left: 18px;
+    background: @color-7;
+    border-bottom: 4px solid @color-2;
+    border-left: 4px solid @color-2;
+    transform: rotate(-45deg);
+    border-radius: 1px;
+}
+
+.field-checkbox__input:checked + .field-checkbox__text:hover::before {
+    background: @color-10;
+}
+
+.field-checkbox__input:checked + .field-checkbox__text:active::after {
+    opacity: .3;
+}
