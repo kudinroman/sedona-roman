@@ -167,14 +167,13 @@
       var modal = document.querySelector('.modal');
       var submit = document.querySelector('.field-action__btn');
 
-      submit.addEventListener('click', function(event) {
+      submit.addEventListener('click', function() {
           modal.classList.add('modal--error')
       });
 
       button.addEventListener('click', function() {
         modal.classList.remove('modal--error');
       });
-
     </script>
   </body>
 </html>
