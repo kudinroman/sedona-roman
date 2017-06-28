@@ -53,6 +53,10 @@
 
 .page-heading--photo,
 .page-heading--form {
+  &::after {
+    display: none;
+  }
+
   @media @tablet {
     padding: 28px 0px;
     font-size: 30px;
@@ -70,10 +74,6 @@
 
     @media @tablet {
       border-bottom: none;
-    }
-
-    &::after {
-      display: none;
     }
   }
 }
