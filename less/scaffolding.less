@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background: @color-7;
+}
+
 a {
   text-decoration: none;
   margin: 0px;
@@ -28,6 +32,7 @@ ul {
 }
 
 body {
+  .container();
   position: relative;
   margin: auto;
   font-family: @font-face-primary;
@@ -35,7 +40,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   min-width: 320px;
-  max-width: 1200px;
+  background: @color-3;
+  box-shadow: -1px 0px 40px -2px rgba(0,0,0,0.3);
 }
 
 button {
@@ -45,8 +51,13 @@ button {
 
 img {
   display: block;
+  width: 100%;
 }
 
 textarea {
   vertical-align: top;
+}
+
+main {
+  .container();
 }

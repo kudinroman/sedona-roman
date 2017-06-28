@@ -4,11 +4,6 @@
   align-items: center;
   flex-wrap: nowrap;
   padding: 0px 6%;
-
-  @media @tablet {
-    width: 100%;
-    max-width: 1200px;
-  }
 }
 
 .field-checkbox__title {
@@ -30,13 +25,11 @@
   align-items: flex-start;
   margin: auto;
   width: 100%;
-  max-width: 500px;
 
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 1200px;
-    padding-left: 15%;
+    justify-content: center;
   }
 
   @media @desktop {
@@ -47,7 +40,7 @@
 
 .field-checkbox__item {
   @media @tablet {
-    width: 256px;
+    width: 40%;
   }
 
   @media @desktop {
@@ -92,6 +85,7 @@
     background: @color-6;
   }
 }
+
 .field-checkbox__input:checked + .field-checkbox__text::after {
     position: absolute;
     display: block;
@@ -100,7 +94,6 @@
     height: 14px;
     top: 18px;
     left: 18px;
-    background: @color-7;
     border-bottom: 4px solid @color-2;
     border-left: 4px solid @color-2;
     transform: rotate(-45deg);

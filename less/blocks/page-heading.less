@@ -1,6 +1,23 @@
 .page-heading {
   min-width: 320px;
   background: @color-3;
+
+  &::after {
+    position: relative;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/bg-triangle.svg");
+    background-size: cover;
+    bottom: -37px;
+    z-index: 1;
+
+    @media @tablet {
+      display: none;
+    }
+  }
 }
 
 .page-heading__title {
@@ -29,25 +46,8 @@
   padding-bottom: 6px;
   padding: 0px 10% 6px;
 
-  &::after {
-    position: relative;
-    margin: auto;
-    content: "";
-    display: block;
-    width: 320px;
-    height: 37px;
-    background-image: url("../img/bg-triangle.svg");
-    background-size: cover;
-    bottom: -37px;
-    z-index: 1;
-  }
-
   @media @tablet {
     padding-bottom: 50px;
-
-    &::after {
-      display: none;
-    }
   }
 }
 

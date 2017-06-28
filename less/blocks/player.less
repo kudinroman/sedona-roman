@@ -61,9 +61,21 @@
   }
 }
 
+.player__items {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 25px;
+  padding-right: 23px;
+
+  @media @tablet {
+    margin-top: 36px;
+    padding-left: 35px;
+    padding-right: 41px;
+  }
+}
+
 .player__item {
-  position: absolute;
-  bottom: -42px;
   fill: #5c6870;
   cursor: pointer;
   height: 20px;
@@ -81,42 +93,20 @@
   }
 
   @media @tablet {
-    top: 35px;
     fill: @color-3;
   }
 }
 
 .player__item--replay {
   width: 16px;
-  left: 25px;
-
-  @media @tablet {
-    left: 35px;
-  }
+  margin-right: auto;
 }
 
 .player__item--subtitles {
   width: 32px;
-  left: 174px;
-
-  @media @tablet {
-    left: 524px;
-  }
-
-  @media @desktop {
-    width: 674px;
-  }
+  margin-right: 31px;
 }
 
 .player__item--fullscreen {
   width: 20px;
-  left: 237px;
-
-  @media @tablet {
-    left: 587px;
-  }
-
-  @media @desktop {
-    width: 737px;
-  }
 }
