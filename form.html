@@ -35,7 +35,7 @@
       <p class="page-heading__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
     <main class="main">
-      <form class="form" action="index.html" method="post">
+      <form class="form" method="get" action="form.html">
         <div class="field-text  field-group">
           <h3 class="field-text__title  field-text__title--margin-bottom">Представьтесь:</h3>
           <label class="field-text__item">
@@ -52,7 +52,7 @@
           </label>
         </div>
         <div class="field-text  field-group  field-text--contact  field-group--before">
-          <h3 class="field-text__title  field-group--title">Контактная информация:</h3>
+          <h3 class="field-text__title  field-group__title">Контактная информация:</h3>
           <label class="field-text__item">
             <span class="field-text__text">Контактный телефон*:</span>
             <input class="field-text__input  field-text__input--icon" name="tel" type="tel" placeholder="Введите телефон" pattern="[0-9]{5,15}" required>
@@ -80,28 +80,28 @@
           </div>
         </div>
         <div class="field-checkbox  field-group  field-group--before">
-          <h3 class="field-checkbox__title  field-group--title">Посещенные достопримечательности:</h3>
+          <h3 class="field-checkbox__title  field-group__title">Посещенные достопримечательности:</h3>
           <div class="field-checkbox__wrapper">
             <label class="field-checkbox__item">
-              <input class="field-checkbox__input" type="checkbox" name="checkbox" checked>
+              <input class="field-checkbox__input" type="checkbox" name="attraction" checked>
               <span class="field-checkbox__text">Мост дьявола</span>
             </label>
             <label class="field-checkbox__item">
-              <input class="field-checkbox__input" type="checkbox" name="checkbox" checked>
+              <input class="field-checkbox__input" type="checkbox" name="attraction" checked>
               <span class="field-checkbox__text">Слайд-парк</span>
             </label>
             <label class="field-checkbox__item">
-              <input class="field-checkbox__input" type="checkbox" name="checkbox" checked>
+              <input class="field-checkbox__input" type="checkbox" name="attraction" checked>
               <span class="field-checkbox__text">Гора-колокол</span>
             </label>
             <label class="field-checkbox__item">
-              <input class="field-checkbox__input" type="checkbox" name="checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="attraction">
               <span class="field-checkbox__text">Красные скалы</span>
             </label>
           </div>
         </div>
         <div class="field-text  field-group  field-group--before">
-          <label class="field-text__title  field-group--title" for="textarea">Опишите свои эмоции:</label>
+          <label class="field-text__title  field-group__title" for="textarea">Опишите свои эмоции:</label>
           <div class="field-text__wrapper  field-text__wrapper--textarea">
             <textarea class="field-text__input" id="textarea" type="text" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
@@ -149,16 +149,32 @@
         </a>
       </div>
     </footer>
-    <div class="modal  modal--success">
-      <h3 class="modal__title">Ваш отзыв отправлен!</h3>
-      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="button  modal__btn">Закрыть окно</button>
-    </div>
-    <div class="modal  modal--error">
+    <div class="modal">
       <h3 class="modal__title">Что-то пошло не так!</h3>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       <button class="button  modal__btn">Ок</button>
     </div>
+    <div class="modal">
+      <h3 class="modal__title">Ваш отзыв отправлен!</h3>
+      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <button class="button  modal__btn">Закрыть окно</button>
+    </div>
     <script src="js/toggle.js"></script>
+    <script type="text/javascript">
+      var form = document.querySelector('.form');
+      var input = document.querySelector('.field-text__input');
+      var button = document.querySelector('.modal__btn');
+      var modal = document.querySelector('.modal');
+      var submit = document.querySelector('.field-action__btn');
+
+      submit.addEventListener('click', function(event) {
+          modal.classList.add('modal--error')
+      });
+
+      button.addEventListener('click', function() {
+        modal.classList.remove('modal--error');
+      });
+
+    </script>
   </body>
 </html>
